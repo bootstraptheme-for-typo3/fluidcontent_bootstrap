@@ -40,7 +40,6 @@ $EM_CONF[$_EXTKEY] = array(
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'fluidwidget' => '',
 		),
 	),
 	'suggests' => array(
