@@ -11,7 +11,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Fluid Content Elements: Twitter Bootstrap',
+	'title' => 'Fluid Content: Twitter Bootstrap Elements',
 	'description' => 'A collection of Twitter Boostrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs',
 	'category' => 'misc',
 	'author' => 'Claus Due',
