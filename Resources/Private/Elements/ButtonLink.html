@@ -14,7 +14,10 @@
 		<flux:flexform.field.input name="text" label="Link text" />
 		<flux:flexform.field.checkbox name="tooltip" label="Display title as tooltip" />
 		<flux:flexform.field.input name="title" label="Optional title, appears as tooltip if tooltip is enabled" />
+		<flux:flexform.field.input name="icon" label="Optional icon class name, example 'envelope' or 'exclamation-sign'" />
+		<flux:flexform.field.select name="iconPlacement" label="Icon placement - left or right" items="{0: {0: 0, 1: 'Left'}, 1: {0: 1, 1: 'Right'}}" />
 		<flux:flexform.field.select name="size" label="LinkButton size" commaSeparatedItems="default,mini,small,large" size="1" maxItems="1" />
+		<flux:flexform.field.checkbox name="block" label="Display button as block element (100% width)" />
 		<flux:flexform.field.select name="class" label="LinkButton style type" commaSeparatedItems="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
 		<flux:flexform.field.input name="additionalClassNames" label="Additional class names for LinkButton element" />
 		<flux:flexform.field.select name="wrapTag" label="Wrap with tag" commaSeparatedItems="none,span,p,div,dt,dd,fieldset" />
@@ -58,12 +61,22 @@
 <f:section name="Button">
 	<f:if condition="{target -> v:math.round()} > 0">
 		<f:then>
-			<f:link.page pageUid="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">{text}</f:link.page>
+			<f:link.page pageUid="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}{f:if(condition: block, then: ' btn-block')}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+				<f:render section="Text" arguments="{_all}" />
+			</f:link.page>
 		</f:then>
 		<f:else>
-			<a href="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">{text}</a>
+			<a href="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+				<f:render section="Text" arguments="{_all}" />
+			</a>
 		</f:else>
 	</f:if>
+</f:section>
+
+<f:section name="Text">
+	<f:if condition="{icon}"><f:if condition="{iconPlacement}"><f:else><i class="icon icon-{icon}"></i></f:else></f:if></f:if>
+	{text}
+	<f:if condition="{icon}"><f:if condition="{iconPlacement}"><f:then><i class="icon icon-{icon}"></i></f:then></f:if></f:if>
 </f:section>
 
 </div>
