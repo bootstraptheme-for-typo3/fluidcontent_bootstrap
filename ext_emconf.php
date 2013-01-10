@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "fluidcontent_bootstrap".
  *
- * Auto generated 09-01-2013 01:18
+ * Auto generated 10-01-2013 22:52
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
-	'version' => '1.0.1',
+	'version' => '1.0.2',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '4.5-0.0.0',
