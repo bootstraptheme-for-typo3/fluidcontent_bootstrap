@@ -50,7 +50,7 @@
 		<f:for each="{panels}" as="panel" iteration="iteration">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="{f:if(condition: enableGrouping, then: '#accordion-{record.uid}')}" data-target="#panel-{record.uid}-{iteration.index}" href="#panel-{record.uid}-{iteration.index}">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="{f:if(condition: enableGrouping, then: '#accordion-{record.uid}')}" data-target="#panel-{record.uid}-{iteration.index}">
 						{panel.panel.title}
 					</a>
 				</div>
