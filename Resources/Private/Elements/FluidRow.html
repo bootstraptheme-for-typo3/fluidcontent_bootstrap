@@ -12,6 +12,7 @@
 			<flux:flexform.object name="column" label="Column">
 				<flux:flexform.field.select name="class" label="Class" commaSeparatedItems="span1,span2,span3,span4,span5,span6,span7,span8,span9,span10,span11,span12" />
 				<flux:flexform.field.checkbox name="addWell" label="Add 'Well' inside cell" />
+				<flux:flexform.field.input name="additionalClass" label="Additional class names" />	
 			</flux:flexform.object>
 		</flux:flexform.section>
 		<flux:flexform.grid>
@@ -34,12 +35,14 @@
 			<div class="{sectionObject.column.class}">
 				<f:if condition="{sectionObject.column.addWell}">
 					<f:then>
-						<div class="well">
+						<div class="well{f:if(condition: sectionObject.column.additionalClass, then: ' {sectionObject.column.additionalClass}')}">
 							<flux:flexform.renderContent area="column{iteration.cycle}" />
 						</div>
 					</f:then>
 					<f:else>
-						<flux:flexform.renderContent area="column{iteration.cycle}" />
+						<div{f:if(condition: sectionObject.column.additionalClass, then: ' class="{sectionObject.column.additionalClass}"')}>
+							<flux:flexform.renderContent area="column{iteration.cycle}" />
+						</div>	
 					</f:else>
 				</f:if>
 			</div>
