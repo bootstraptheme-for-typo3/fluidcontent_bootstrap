@@ -42,7 +42,7 @@
 	<ul>
 		<f:for each="{items}" as="itemSectionObject">
 			<f:for each="{itemSectionObjects}" as="object" key="objectType">
-				<li><strong>{objectType}</strong> <f:if condition="{0: objectType} != {0: 'divider'}"> <em>{object.text} ({object.target})</em> <fed:exists file="{object.icon}">Icon: {object.icon}</fed:exists></f:if></li>
+				<li><strong>{objectType}</strong> <f:if condition="{0: objectType} != {0: 'divider'}"> <em>{object.text} ({object.target})</em> <v:media.exists file="{object.icon}">Icon: {object.icon}</v:media.exists></f:if></li>
 			</f:for>
 		</f:for>
 	</ul>
@@ -56,7 +56,7 @@
 				<f:for each="{itemSectionObjects}" as="object" key="objectType">
 					<v:switch value="{objectType}">
 						<v:case case="header" break="TRUE">
-							<li class="nav-header {object.class}"><fed:raw>{icon}{object.text}</fed:raw></li>
+							<li class="nav-header {object.class}"><f:format.raw>{icon}{object.text}</f:format.raw></li>
 						</v:case>
 						<v:case case="divider" break="TRUE">
 							<li class="divider {object.class}"></li>
@@ -66,10 +66,10 @@
 							<li class="{f:if(condition: '{contentObject.pid} == {object.target}', then: 'active', else: 'item')}">
 								<f:if condition="{object.target -> v:math.round()} > 0">
 									<f:then>
-										<f:link.page pageUid="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}"><fed:raw>{icon}{object.text}</fed:raw></f:link.page>
+										<f:link.page pageUid="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}"><f:format.raw>{icon}{object.text}</f:format.raw></f:link.page>
 									</f:then>
 									<f:else>
-										<a href="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}"><fed:raw>{icon}{object.text}</fed:raw></a>
+										<a href="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}"><f:format.raw>{icon}{object.text}</f:format.raw></a>
 									</f:else>
 								</f:if>
 							</li>
