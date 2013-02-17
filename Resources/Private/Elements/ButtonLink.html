@@ -14,7 +14,7 @@
 		<flux:flexform.field.input name="text" label="Link text" />
 		<flux:flexform.field.checkbox name="tooltip" label="Display title as tooltip" />
 		<flux:flexform.field.input name="title" label="Optional title, appears as tooltip if tooltip is enabled" />
-		<flux:flexform.field.input name="icon" label="Optional icon class name, example 'envelope' or 'exclamation-sign'" />
+		<flux:flexform.field.input name="iconClass" label="Optional icon class name, example 'envelope' or 'exclamation-sign'" />
 		<flux:flexform.field.select name="iconPlacement" label="Icon placement - left or right" items="{0: {0: 0, 1: 'Left'}, 1: {0: 1, 1: 'Right'}}" />
 		<flux:flexform.field.select name="size" label="LinkButton size" commaSeparatedItems="default,mini,small,large" size="1" maxItems="1" />
 		<flux:flexform.field.checkbox name="block" label="Display button as block element (100% width)" />
@@ -74,9 +74,9 @@
 </f:section>
 
 <f:section name="Text">
-	<f:if condition="{icon}"><f:if condition="{iconPlacement}"><f:else><i class="icon icon-{icon}"></i></f:else></f:if></f:if>
+	<f:if condition="{iconClass}"><f:if condition="{iconPlacement}"><f:else><i class="icon icon-{iconClass}"></i></f:else></f:if></f:if>
 	{text}
-	<f:if condition="{icon}"><f:if condition="{iconPlacement}"><f:then><i class="icon icon-{icon}"></i></f:then></f:if></f:if>
+	<f:if condition="{iconClass}"><f:if condition="{iconPlacement}"><f:then><i class="icon icon-{iconClass}"></i></f:then></f:if></f:if>
 </f:section>
 
 </div>
