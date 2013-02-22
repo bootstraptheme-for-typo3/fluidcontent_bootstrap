@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "fluidcontent_bootstrap".
  *
- * Auto generated 10-01-2013 22:54
+ * Auto generated 22-02-2013 23:30
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
-	'version' => '1.0.3',
+	'version' => '1.0.4',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '4.5-0.0.0',
@@ -44,7 +44,7 @@ $EM_CONF[$_EXTKEY] = array(
 	),
 	'suggests' => array(
 	),
-	'_md5_values_when_last_written' => 'a:16:{s:12:"ext_icon.gif";s:4:"68b4";s:14:"ext_tables.php";s:4:"3498";s:9:"README.md";s:4:"b309";s:34:"Configuration/TypoScript/setup.txt";s:4:"c1ef";s:41:"Resources/Private/Elements/Accordion.html";s:4:"1620";s:37:"Resources/Private/Elements/Alert.html";s:4:"11d9";s:43:"Resources/Private/Elements/ButtonGroup.html";s:4:"d150";s:42:"Resources/Private/Elements/ButtonLink.html";s:4:"8c5f";s:40:"Resources/Private/Elements/FluidRow.html";s:4:"a73b";s:40:"Resources/Private/Elements/HeroUnit.html";s:4:"8e70";s:46:"Resources/Private/Elements/NavigationList.html";s:4:"66ff";s:42:"Resources/Private/Elements/PageHeader.html";s:4:"e532";s:36:"Resources/Private/Elements/Tabs.html";s:4:"cbf4";s:42:"Resources/Private/Elements/Thumbnails.html";s:4:"e3db";s:36:"Resources/Private/Elements/Well.html";s:4:"feba";s:39:"Resources/Public/Icons/icon-twitter.png";s:4:"9450";}',
+	'_md5_values_when_last_written' => 'a:16:{s:12:"ext_icon.gif";s:4:"68b4";s:14:"ext_tables.php";s:4:"3498";s:9:"README.md";s:4:"b309";s:34:"Configuration/TypoScript/setup.txt";s:4:"c1ef";s:41:"Resources/Private/Elements/Accordion.html";s:4:"28e4";s:37:"Resources/Private/Elements/Alert.html";s:4:"11d9";s:43:"Resources/Private/Elements/ButtonGroup.html";s:4:"d150";s:42:"Resources/Private/Elements/ButtonLink.html";s:4:"1a3a";s:40:"Resources/Private/Elements/FluidRow.html";s:4:"c1a4";s:40:"Resources/Private/Elements/HeroUnit.html";s:4:"8e70";s:46:"Resources/Private/Elements/NavigationList.html";s:4:"b1a1";s:42:"Resources/Private/Elements/PageHeader.html";s:4:"e532";s:36:"Resources/Private/Elements/Tabs.html";s:4:"cbf4";s:42:"Resources/Private/Elements/Thumbnails.html";s:4:"c48d";s:36:"Resources/Private/Elements/Well.html";s:4:"feba";s:39:"Resources/Public/Icons/icon-twitter.png";s:4:"9450";}',
 );
 
 ?>
