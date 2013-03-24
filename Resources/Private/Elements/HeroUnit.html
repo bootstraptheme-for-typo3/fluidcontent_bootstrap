@@ -1,9 +1,11 @@
 {namespace flux=Tx_Flux_ViewHelpers}
-
-<f:layout name="FCE" />
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-herounit" label="Bootstrap: Hero Unit" description="A very large header-type element into which you can insert other content elements." icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-herounit" label="Bootstrap: Hero Unit"
+	               description="A very large header-type element into which you can insert other content elements."
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.grid>
 			<flux:flexform.grid.row>
 				<flux:flexform.grid.column>

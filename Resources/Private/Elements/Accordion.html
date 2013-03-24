@@ -7,7 +7,9 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-tabs" label="Bootstrap: Accordion with content elements" description="Places child content elements in tabs." icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-tabs" label="Bootstrap: Accordion with content elements"
+	               description="Places child content elements in tabs."
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 
 		<flux:flexform.sheet name="display" label="Display">
 			<flux:flexform.field.checkbox name="enableGrouping" label="Enable grouping - ensures only one panel is open concurrently" />

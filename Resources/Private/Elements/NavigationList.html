@@ -7,7 +7,9 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-navigationlist" label="Bootstrap: Navigation List" description="Configurable navigation list of links to various resources." icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-navigationlist" label="Bootstrap: Navigation List"
+	               description="Configurable navigation list of links to various resources."
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.sheet name="display" label="Display">
 			<flux:flexform.field.checkbox name="addWell" label="Add well wrapper" />
 			<flux:flexform.field.checkbox name="zeroPadding" label="Do not pad the wrapper" />

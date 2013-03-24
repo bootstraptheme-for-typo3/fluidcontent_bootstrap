@@ -7,7 +7,9 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="special-header" label="Bootstrap: Column Row" description="Adds a wrapper element that lets you define columns of varying widths" icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="special-header" label="Bootstrap: Column Row"
+	               description="Adds a wrapper element that lets you define columns of varying widths"
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.field.checkbox name="basic" label="Basic (non-responsive) row, uses CSS class 'row' instead of 'row-fluid'" />
 		<flux:flexform.section name="columns" label="Columns">
 			<flux:flexform.object name="column" label="Column">
