@@ -1,9 +1,12 @@
 {namespace flux=Tx_Flux_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 
 <f:layout name="FCE" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-pageheader" label="Bootstrap: Page Header" description="An underlined page header element with optional small caption." icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-pageheader" label="Bootstrap: Page Header"
+	               description="An underlined page header element with optional small caption."
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.field.input name="header" label="Large text" />
 		<flux:flexform.field.input name="subheader" label="Smaller text next to large text" />
 	</flux:flexform>
