@@ -11,10 +11,6 @@
 	               description="Places child content elements in tabs."
 	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 
-		<flux:flexform.sheet name="display" label="Display">
-			<flux:flexform.field.checkbox name="enableGrouping" label="Enable grouping - ensures only one panel is open concurrently" />
-		</flux:flexform.sheet>
-
 		<flux:flexform.sheet name="panels" label="Panels">
 			<flux:flexform.section name="panels" label="Panels">
 				<flux:flexform.object name="panel" label="Panel">
@@ -52,8 +48,8 @@
 		<f:for each="{panels}" as="panel" iteration="iteration">
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="{f:if(condition: enableGrouping, then: '#accordion-{record.uid}')}"
-					   data-target="{v:page.absoluteUrl()}#panel-{record.uid}-{iteration.index}" href="#panel-{record.uid}-{iteration.index}">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{record.uid}"
+					   href="#panel-{record.uid}-{iteration.index}">
 						{panel.panel.title}
 					</a>
 				</div>
