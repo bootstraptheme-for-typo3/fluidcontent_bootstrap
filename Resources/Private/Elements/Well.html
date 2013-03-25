@@ -1,10 +1,13 @@
 {namespace flux=Tx_Flux_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-well" label="Bootstrap: Content Well" description="Places child content elements in a Well-styled wrapper element." icon="../typo3conf/ext/fluidcontent_bootstrap/Resources/Public/Icons/icon-twitter.png">
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-well" label="Bootstrap: Content Well"
+	               description="Places child content elements in a Well-styled wrapper element."
+	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.grid>
 			<flux:flexform.grid.row>
 				<flux:flexform.grid.column>
