@@ -7,10 +7,10 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-carousel" label="Bootstrap: Image Carousel"
-	               description="Images with captions placed in a carousel matrix with JS based image change."
+	<flux:flexform wizardTab="Bootstrap" id="bootstrap-carousel" label="Bootstrap: Element Carousel"
+	               description="Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change."
 	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.checkbox name="settings.carousel.quickselect" label="Display cirle icons for direct selection of slides, default top right corner" default="1" />
+		<flux:flexform.field.checkbox name="settings.carousel.quickselect" label="Display circle icons for direct selection of slides, default top right corner" default="1" />
 		<flux:flexform.field.input name="settings.carousel.interval" label="Interval between image changes, in miliseconds (default: 5000)" default="5000" eval="int,trim" />
 		<flux:flexform.field.input name="settings.carousel.id" label="DOM element ID (override not necessary but possible)" default="{v:random.string(length: 8)}" />
 		<flux:flexform.field.input name="settings.carousel.labelNext" label="Label: next (clear to remove link)" default="&rsaquo;" />
