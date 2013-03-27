@@ -15,7 +15,7 @@
 				</flux:flexform.grid.column>
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>
-		<flux:flexform.field.select name="bootstrap-well-style" label="Optional Well Style Class"
+		<flux:flexform.field.select name="wellStyle" label="Optional Well Style Class"
 			commaSeparatedItems="small, normal, large" default="normal" />
 	</flux:flexform>
 </f:section>
@@ -25,24 +25,19 @@
 </f:section>
 
 <f:section name="Main">
-	<f:if condition="{0: bootstrap-well-style} == {0: 'small'}">
-		<f:then>
-			<div class="well well-small">
-		</f:then>
-	</f:if>
-	<f:if condition="{0: bootstrap-well-style} == {0: 'normal'}">
-		<f:then>
-			<div class="well">
-		</f:then>
-	</f:if>
-	<f:if condition="{0: bootstrap-well-style} == {0: 'large'}">
-		<f:then>
-			<div class="well well-large">
-		</f:then>
-	</f:if>
-	<!-- This needs to be rendered either way -->
-			<flux:flexform.renderContent area="content" />
-	</div>
+    <!-- TODO: use short if-syntax; currently bugged(?) - compares Array != Array -->
+    <f:if condition="{0: wellStyle} != {0: 'normal'}">
+        <f:then>
+            <div class="well well-{wellStyle}">
+        </f:then>
+        <f:else>
+            <div class="well">
+        </f:else>
+    </f:if>
+                    <!-- this needs to be rendered every time -->
+                <flux:content.render area="content" />
+            </div>
+
 </f:section>
 
 </div>
