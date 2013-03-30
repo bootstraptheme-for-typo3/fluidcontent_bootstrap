@@ -1,26 +1,22 @@
-{namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=Tx_Flux_ViewHelpers}
-<f:layout name="FCE" />
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
      xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-tabs" label="Bootstrap: Accordion with content elements"
-	               description="Places child content elements in tabs."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-
-		<flux:flexform.sheet name="panels" label="Panels">
-			<flux:flexform.section name="panels" label="Panels">
-				<flux:flexform.object name="panel" label="Panel">
-					<flux:flexform.field.input name="title" label="Panel title" />
-					<flux:flexform.field.input name="class" label="Additional class names" />
-					<flux:flexform.field.checkbox name="active" label="Opened?" />
+	<flux:flexform wizardTab="Bootstrap" id="accordion" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.sheet name="panels">
+			<flux:flexform.section name="panels">
+				<flux:flexform.object name="panel">
+					<flux:flexform.field.input name="title" />
+					<flux:flexform.field.input name="class" />
+					<flux:flexform.field.checkbox name="active" />
 				</flux:flexform.object>
 			</flux:flexform.section>
 		</flux:flexform.sheet>
-
 		<flux:flexform.grid>
 			<f:for each="{panels}" as="panel" iteration="iteration">
 				<flux:flexform.grid.row>

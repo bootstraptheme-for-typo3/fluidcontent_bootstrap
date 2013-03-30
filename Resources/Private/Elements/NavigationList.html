@@ -7,33 +7,31 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-navigationlist" label="Bootstrap: Navigation List"
-	               description="Configurable navigation list of links to various resources."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.sheet name="display" label="Display">
-			<flux:flexform.field.checkbox name="addWell" label="Add well wrapper" />
-			<flux:flexform.field.checkbox name="zeroPadding" label="Do not pad the wrapper" />
-			<flux:flexform.field.input name="class" label="Additional class names for wrapper element" />
+	<flux:flexform wizardTab="Bootstrap" id="navigationlist" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.sheet name="display">
+			<flux:flexform.field.checkbox name="addWell" />
+			<flux:flexform.field.checkbox name="zeroPadding" />
+			<flux:flexform.field.input name="class" />
 		</flux:flexform.sheet>
-		<flux:flexform.sheet name="items" label="Items">
-			<flux:flexform.section name="items" label="Items">
-				<flux:flexform.object name="header" label="List header">
-					<flux:flexform.field.input name="text" label="Header text" />
-					<flux:flexform.field.input name="class" label="Additional class names" />
+		<flux:flexform.sheet name="items">
+			<flux:flexform.section name="items">
+				<flux:flexform.object name="header">
+					<flux:flexform.field.input name="text" />
+					<flux:flexform.field.input name="class" />
 				</flux:flexform.object>
-				<flux:flexform.object name="item" label="List item">
-					<flux:flexform.field.input name="text" label="Item label text" />
-					<flux:flexform.field.input name="tooltip" label="Optional tooltip text" />
-					<flux:flexform.field.input name="icon" label="Optional icon (16x16)" eval="trim">
+				<flux:flexform.object name="item">
+					<flux:flexform.field.input name="text" />
+					<flux:flexform.field.input name="tooltip" />
+					<flux:flexform.field.input name="icon" eval="trim">
 						<flux:flexform.field.wizard.link />
 					</flux:flexform.field.input>
-					<flux:flexform.field.input name="target" label="Target">
+					<flux:flexform.field.input name="target">
 						<flux:flexform.field.wizard.link />
 					</flux:flexform.field.input>
-					<flux:flexform.field.input name="class" label="Additional class names" />
+					<flux:flexform.field.input name="class" />
 				</flux:flexform.object>
-				<flux:flexform.object name="divider" label="Divider">
-					<flux:flexform.field.input name="class" label="Additional class names" />
+				<flux:flexform.object name="divider">
+					<flux:flexform.field.input name="class" />
 				</flux:flexform.object>
 			</flux:flexform.section>
 		</flux:flexform.sheet>
