@@ -3,13 +3,11 @@
 <f:layout name="Content" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-herounit" label="Bootstrap: Hero Unit"
-	               description="A very large header-type element into which you can insert other content elements."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
+	<flux:flexform wizardTab="Bootstrap" id="herounit" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.grid>
 			<flux:flexform.grid.row>
 				<flux:flexform.grid.column>
-					<flux:flexform.content name="content" label="Hero unit content" />
+					<flux:flexform.content name="content" />
 				</flux:flexform.grid.column>
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>
