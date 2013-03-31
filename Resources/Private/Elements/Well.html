@@ -5,13 +5,11 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-well" label="Bootstrap: Content Well"
-	               description="Places child content elements in a Well-styled wrapper element."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
+	<flux:flexform wizardTab="Bootstrap" id="well" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.grid>
 			<flux:flexform.grid.row>
 				<flux:flexform.grid.column>
-					<flux:flexform.content name="content" label="Child content" />
+					<flux:flexform.content name="content" />
 				</flux:flexform.grid.column>
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>

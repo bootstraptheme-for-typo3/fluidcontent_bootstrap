@@ -4,11 +4,9 @@
 <f:layout name="FCE" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-pageheader" label="Bootstrap: Page Header"
-	               description="An underlined page header element with optional small caption."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="header" label="Large text" />
-		<flux:flexform.field.input name="subheader" label="Smaller text next to large text" />
+	<flux:flexform wizardTab="Bootstrap" id="pageheader" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.field.input name="header" />
+		<flux:flexform.field.input name="subheader" />
 	</flux:flexform>
 </f:section>
 

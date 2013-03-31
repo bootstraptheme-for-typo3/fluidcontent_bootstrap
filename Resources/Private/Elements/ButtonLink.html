@@ -7,31 +7,29 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-buttonlink" label="Bootstrap: Button Link"
-	               description="Default Twitter Bootstrap button-styled link to a page, file or custom URL."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="target" label="Link target">
+	<flux:flexform wizardTab="Bootstrap" id="buttonlink" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.field.input name="target">
 			<flux:flexform.field.wizard.link />
 		</flux:flexform.field.input>
-		<flux:flexform.field.input name="text" label="Link text" />
-		<flux:flexform.field.checkbox name="tooltip" label="Display title as tooltip" />
-		<flux:flexform.field.input name="title" label="Optional title, appears as tooltip if tooltip is enabled" />
-		<flux:flexform.field.input name="iconClass" label="Optional icon class name, example 'envelope' or 'exclamation-sign'" />
-		<flux:flexform.field.select name="iconPlacement" label="Icon placement - left or right" items="{0: {0: 0, 1: 'Left'}, 1: {0: 1, 1: 'Right'}}" />
-		<flux:flexform.field.select name="size" label="LinkButton size" commaSeparatedItems="default,mini,small,large" size="1" maxItems="1" />
-		<flux:flexform.field.checkbox name="block" label="Display button as block element (100% width)" />
-		<flux:flexform.field.select name="class" label="LinkButton style type" commaSeparatedItems="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
-		<flux:flexform.field.input name="additionalClassNames" label="Additional class names for LinkButton element" />
-		<flux:flexform.field.select name="wrapTag" label="Wrap with tag" commaSeparatedItems="none,span,p,div,dt,dd,fieldset" />
-		<flux:flexform.sheet name="addons" label="Addons">
-			<flux:flexform.section name="addons" label="Button addons">
-				<flux:flexform.object name="popover" label="Popover dialog">
-					<flux:flexform.field.input name="title" label="Popover title" />
-					<flux:flexform.field.input name="content" label="Popover content" />
+		<flux:flexform.field.input name="text" />
+		<flux:flexform.field.checkbox name="tooltip" />
+		<flux:flexform.field.input name="title" />
+		<flux:flexform.field.input name="iconClass" />
+		<flux:flexform.field.select name="iconPlacement" />
+		<flux:flexform.field.select name="size" commaSeparatedItems="default,mini,small,large" size="1" maxItems="1" />
+		<flux:flexform.field.checkbox name="block" />
+		<flux:flexform.field.select name="class" commaSeparatedItems="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
+		<flux:flexform.field.input name="additionalClassNames" />
+		<flux:flexform.field.select name="wrapTag" commaSeparatedItems="none,span,p,div,dt,dd,fieldset" />
+		<flux:flexform.sheet name="addons">
+			<flux:flexform.section name="addons">
+				<flux:flexform.object name="popover">
+					<flux:flexform.field.input name="title" />
+					<flux:flexform.field.input name="content" />
 				</flux:flexform.object>
-				<flux:flexform.object name="modal" label="Modal dialog">
-					<flux:flexform.field.input name="title" label="Modal dialog title" />
-					<flux:flexform.field.group name="content" label="Content elements to be displayed" internalType="db" allowed="tt_content">
+				<flux:flexform.object name="modal">
+					<flux:flexform.field.input name="title" />
+					<flux:flexform.field.group name="content" internalType="db" allowed="tt_content">
 						<flux:flexform.field.wizard.add table="tt_content" />
 						<flux:flexform.field.wizard.edit />
 					</flux:flexform.field.group>

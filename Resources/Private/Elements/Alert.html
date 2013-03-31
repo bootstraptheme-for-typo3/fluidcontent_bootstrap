@@ -3,20 +3,19 @@
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-alert" label="Bootstrap: Alert (inline)"
-	               description="Styled alert box, inline as page content. Optionally with dismiss/close icon."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="header" label="Alert header" />
-		<flux:flexform.field.input name="closeLinkText" label="Close link text (for example: a single x or &times;)" />
-		<flux:flexform.field.select name="class" label="Alert box class" commaSeparatedItems="default,info,success,error" default="default" />
-		<flux:flexform.field.checkbox name="isBlock" label="Add additional padding" />
+	<flux:flexform wizardTab="Bootstrap" id="alert" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.field.input name="header" />
+		<flux:flexform.field.input name="closeLinkText" />
+		<flux:flexform.field.select name="class" commaSeparatedItems="default,info,success,error" default="default" />
+		<flux:flexform.field.checkbox name="isBlock" />
 		<flux:flexform.grid>
 			<flux:flexform.grid.row>
 				<flux:flexform.grid.column>
-					<flux:flexform.content name="content" label="Child content" />
+					<flux:flexform.content name="content" />
 				</flux:flexform.grid.column>
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>

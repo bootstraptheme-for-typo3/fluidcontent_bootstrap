@@ -7,15 +7,13 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="bootstrap-carousel" label="Bootstrap: Element Carousel"
-	               description="Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change."
-	               icon="{v:extension.path.resources(extensionName: 'FluidcontentBootstrap', path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.checkbox name="settings.carousel.quickselect" label="Display circle icons for direct selection of slides, default top right corner" default="1" />
-		<flux:flexform.field.input name="settings.carousel.interval" label="Interval between image changes, in miliseconds (default: 5000)" default="5000" eval="int,trim" />
-		<flux:flexform.field.input name="settings.carousel.id" label="DOM element ID (override not necessary but possible)" default="{v:random.string(length: 8)}" />
-		<flux:flexform.field.input name="settings.carousel.labelNext" label="Label: next (clear to remove link)" default="&rsaquo;" />
-		<flux:flexform.field.input name="settings.carousel.labelPrev" label="Label: previous (clear to remove link)" default="&lsaquo;" />
-		<flux:flexform.field.input name="settings.carousel.width" label="Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping" default="1170c" />
+	<flux:flexform wizardTab="Bootstrap" id="carousel" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:flexform.field.checkbox name="settings.carousel.quickselect" default="1" />
+		<flux:flexform.field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
+		<flux:flexform.field.input name="settings.carousel.id" default="{v:random.string(length: 8)}" />
+		<flux:flexform.field.input name="settings.carousel.labelNext" default="&rsaquo;" />
+		<flux:flexform.field.input name="settings.carousel.labelPrev" default="&lsaquo;" />
+		<flux:flexform.field.input name="settings.carousel.width" default="1170c" />
 		<flux:flexform.grid>
 			<f:for each="{elements}" as="element" iteration="iteration">
 				<f:for each="{element}" key="elementType" as="elementData">
@@ -29,26 +27,26 @@
 				</f:for>
 			</f:for>
 		</flux:flexform.grid>
-		<flux:flexform.sheet name="elements" label="Elements">
-			<flux:flexform.section name="elements" label="Elements">
-				<flux:flexform.object name="text" label="Text">
-					<flux:flexform.field.input name="title" label="Header" />
-					<flux:flexform.field.select name="size" label="Header size" commaSeparatedItems="h1,h2,h3,h4,h5,h6,h7,h8" />
-					<flux:flexform.field.text name="text" label="Text" enableRichText="TRUE" />
+		<flux:flexform.sheet name="elements">
+			<flux:flexform.section name="elements">
+				<flux:flexform.object name="text">
+					<flux:flexform.field.input name="title" />
+					<flux:flexform.field.select name="size" commaSeparatedItems="h1,h2,h3,h4,h5,h6,h7,h8" />
+					<flux:flexform.field.text name="text" enableRichText="TRUE" />
 					<f:render section="SharedObjectFields" arguments="{_all}" />
 				</flux:flexform.object>
-				<flux:flexform.object name="content" label="Content">
-					<flux:flexform.field.input name="id" label="Content Area ID" default="{v:random.string(length: 6)}" />
+				<flux:flexform.object name="content">
+					<flux:flexform.field.input name="id" default="{v:random.string(length: 6)}" />
 					<f:render section="SharedObjectFields" arguments="{_all}" />
 				</flux:flexform.object>
-				<flux:flexform.object name="image" label="Image">
-					<flux:flexform.field.file name="file" label="Image file" />
+				<flux:flexform.object name="image">
+					<flux:flexform.field.file name="file" />
 					<f:render section="SharedObjectFields" arguments="{_all}" />
 				</flux:flexform.object>
 			</flux:flexform.section>
 		</flux:flexform.sheet>
-		<flux:flexform.sheet name="styles" label="Styles">
-			<flux:flexform.field.custom name="void" label="">
+		<flux:flexform.sheet name="styles">
+			<flux:flexform.field.custom name="void">
 				<h3>Styling</h3>
 				<p>
 					Below you can enter a few styles to be used for this specific carousel instance.
@@ -61,10 +59,10 @@
 					<li>font-size: 18px; color: #000000</li>
 				</ul>
 			</flux:flexform.field.custom>
-			<flux:flexform.field.text name="settings.carousel.quickselectStyles" label="Optional CSS rule for the quick slide selector dots container" cols="130" rows="3" />
-			<flux:flexform.field.text name="settings.carousel.quickselectDotStyles" label="Optional CSS rule for the quick slide selector dots" cols="130" rows="3" />
-			<flux:flexform.field.text name="settings.carousel.navigationStyles" label="Optional CSS rule for the navigation dots" cols="130" rows="3" />
-			<flux:flexform.field.text name="settings.carousel.innerStyles" label="Optional CSS rule for the slider area body" cols="130" rows="3" />
+			<flux:flexform.field.text name="settings.carousel.quickselectStyles" cols="130" rows="3" />
+			<flux:flexform.field.text name="settings.carousel.quickselectDotStyles" cols="130" rows="3" />
+			<flux:flexform.field.text name="settings.carousel.navigationStyles" cols="130" rows="3" />
+			<flux:flexform.field.text name="settings.carousel.innerStyles" cols="130" rows="3" />
 		</flux:flexform.sheet>
 	</flux:flexform>
 </f:section>
