@@ -1,6 +1,7 @@
 [GLOBAL]
 plugin.tx_fluidcontentbootstrap.view {
 	label = Fluid Content Elements - Twitter Bootstrap
+	extensionKey = fluidcontent_bootstrap
 	templateRootPath = EXT:fluidcontent_bootstrap/Resources/Private/Templates/
 	partialRootPath = EXT:flux/Resources/Private/Partials/
 	layoutRootPath = EXT:fluidcontent/Resources/Private/Layouts/
