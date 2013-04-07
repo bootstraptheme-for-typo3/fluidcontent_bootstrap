@@ -27,6 +27,6 @@ When inserted, each content element contains a special panel with configuration 
 
 ## References
 
-* https://github.com/NamelessCoder/fluidcontent is a dependency - it is the integration necessary to render Fluid Content Elements
-* https://github.com/NamelessCoder/vhs is dependency providing many ViewHelpers used in the Fluid Content Element templates
-* https://github.com/NamelessCoder/fluidcontent_fed is another provider of Fluid Content Elements - written with FED ViewHelpers
+* https://github.com/FluidTYPO3/fluidcontent is a dependency - it is the integration necessary to render Fluid Content Elements
+* https://github.com/FluidTYPO3/vhs is dependency providing many ViewHelpers used in the Fluid Content Element templates
+* https://github.com/FluidTYPO3/fluidcontent_fed is another provider of Fluid Content Elements - written with FED ViewHelpers
