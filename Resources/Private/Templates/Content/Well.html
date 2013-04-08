@@ -23,18 +23,9 @@
 </f:section>
 
 <f:section name="Main">
-    <!-- TODO: use short if-syntax; currently bugged(?) - compares Array != Array -->
-    <f:if condition="{0: wellStyle} != {0: 'normal'}">
-        <f:then>
-            <div class="well well-{wellStyle}">
-        </f:then>
-        <f:else>
-            <div class="well">
-        </f:else>
-    </f:if>
-                    <!-- this needs to be rendered every time -->
-                <flux:content.render area="content" />
-            </div>
+	<div class="well{f:if(condition: '{0: wellStyle} !== {0: "normal"}', then: ' well-{wellStyle}')}">
+		<flux:content.render area="content" />
+    </div>
 
 </f:section>
 
