@@ -119,17 +119,17 @@
 				<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
 					<f:for each="{element}" key="elementType" as="elementData">
 						<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
+						<f:if condition="{elementData.caption}">
+							<div class="carousel-caption">
+								<f:if condition="{elementData.header}">
+									<h4>{elementData.header -> f:format.html()}</h4>
+								</f:if>
+								<f:if condition="{elementData.caption}">
+									{elementData.caption -> f:format.html()}
+								</f:if>
+							</div>
+						</f:if>
 					</f:for>
-					<f:if condition="{elementData.caption}">
-						<div class="carousel-caption">
-							<f:if condition="{elementData.header}">
-								<h4>{elementData.header -> f:format.html()}</h4>
-							</f:if>
-							<f:if condition="{elementData.caption}">
-								{elementData.caption -> f:format.html()}
-							</f:if>
-						</div>
-					</f:if>
 				</div>
 			</f:for>
 		</div>
