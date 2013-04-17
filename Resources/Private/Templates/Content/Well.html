@@ -13,6 +13,8 @@
 				</flux:flexform.grid.column>
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>
+		<flux:flexform.field.select name="wellStyle" label="Optional Well Style Class"
+			commaSeparatedItems="small, normal, large" default="normal" />
 	</flux:flexform>
 </f:section>
 
@@ -21,9 +23,8 @@
 </f:section>
 
 <f:section name="Main">
-	<div class="well">
-		<flux:flexform.renderContent area="content" />
+	<div class="well{f:if(condition: '{0: wellStyle} != {0: "normal"}', then: ' well-{wellStyle}')}">
+		<flux:content.render area="content" />
 	</div>
 </f:section>
-
 </div>
