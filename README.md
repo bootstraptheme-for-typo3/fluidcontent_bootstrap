@@ -1,5 +1,7 @@
-TYPO3 extension Fluid Content - Bootstrap: Fluid Content Elements for Twitter Bootstrap using VHS
-=================================================================================================
+Fluid Content Elements for Twitter Bootstrap
+============================================
+
+[![Build Status](https://travis-ci.org/FluidTYPO3/fluidcontent_bootstrap.png?branch=master)](https://travis-ci.org/FluidTYPO3/fluidcontent_bootstrap)
 
 ## What is it?
 
