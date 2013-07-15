@@ -12,7 +12,7 @@
 		<flux:flexform.field.checkbox name="basic" />
 		<flux:flexform.section name="columns">
 			<flux:flexform.object name="column">
-				<flux:flexform.field.select name="class" commaSeparatedItems="{f:render(section: 'Value', arguments: {iteration: iteration})
+				<flux:flexform.field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
 				    -> v:iterator.loop(count: settings.gridColumns, iteration: 'iteration', minimum: 1)}" label="Columns: {settings.gridColumns}" />
 				<flux:flexform.field.checkbox name="addWell" />
 				<flux:flexform.field.input name="additionalClass" />
