@@ -35,7 +35,7 @@
 
 <f:section name="SharedObject">
 	<flux:flexform.field.checkbox name="disabled" label="Disable/hide this object" />
-	<flux:flexform.field.select name="class" label="Size" commaSeparatedItems="1,2,3,4,5,6,7,8,9,10,11,12" />
+	<flux:flexform.field.select name="class" label="Size" items="1,2,3,4,5,6,7,8,9,10,11,12" />
 </f:section>
 
 <f:section name="ImageObject">
@@ -57,9 +57,9 @@
 		<f:render section="SharedObject" arguments="{_all}" />
 		<flux:flexform.field.input name="name" />
 		<flux:flexform.field.input name="label" />
-		<flux:flexform.field.html name="message" label="">
+		<flux:flexform.field.custom name="message" label="">
 			Save this content element then insert content elements through page module to fill in this thumbnail.
-		</flux:flexform.field.html>
+		</flux:flexform.field.custom>
 	</flux:flexform.object>
 </f:section>
 
