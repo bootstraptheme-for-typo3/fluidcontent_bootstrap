@@ -55,6 +55,7 @@
       <label index="flux.carousel.fields.settings.carousel.labelPrev">Label: previous (clear to remove link)</label>
       <label index="flux.carousel.fields.settings.carousel.navigationStyles">Optional CSS rule for the navigation dots</label>
       <label index="flux.carousel.fields.settings.carousel.quickselect">Display circle icons for direct selection of slides, default top right corner</label>
+      <label index="flux.carousel.fields.settings.carousel.quickselectType">Choose navigation display type</label>
       <label index="flux.carousel.fields.settings.carousel.quickselectDotStyles">Optional CSS rule for the quick slide selector dots</label>
       <label index="flux.carousel.fields.settings.carousel.quickselectStyles">Optional CSS rule for the quick slide selector dots container</label>
       <label index="flux.carousel.fields.settings.carousel.width">Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping</label>
