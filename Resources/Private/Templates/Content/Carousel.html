@@ -11,8 +11,8 @@
 		<flux:flexform.field.checkbox name="settings.carousel.quickselect" default="1" />
 		<flux:flexform.field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
 		<flux:flexform.field.input name="settings.carousel.id" default="{v:random.string(length: 8)}" />
-		<flux:flexform.field.input name="settings.carousel.labelNext" default="&rsaquo;" />
-		<flux:flexform.field.input name="settings.carousel.labelPrev" default="&lsaquo;" />
+		<flux:flexform.field.input name="settings.carousel.labelNext" default="" />
+		<flux:flexform.field.input name="settings.carousel.labelPrev" default="" />
 		<flux:flexform.field.input name="settings.carousel.width" default="1170c" />
 		<flux:flexform.grid>
 			<f:for each="{elements}" as="element" iteration="iteration">
@@ -121,8 +121,9 @@
 						<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
 						<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
 							<div class="carousel-caption">
+
 								<f:if condition="{0: elementData.header} != {0: ''}">
-									<h4>{elementData.header -> f:format.html()}</h4>
+									<h3>{elementData.header -> f:format.html()}</h3>
 								</f:if>
 								<f:if condition="{0: elementData.caption} != {0: ''}">
 									{elementData.caption -> f:format.html()}
@@ -134,10 +135,20 @@
 			</f:for>
 		</div>
 		<f:if condition="{settings.carousel.labelPrev}">
-			<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev -> f:format.raw()}</a>
+			<f:then>
+				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev -> f:format.raw()}</a>
+			</f:then>
+			<f:else>
+				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="icon-prev"></span></a>
+			</f:else>
 		</f:if>
 		<f:if condition="{settings.carousel.labelNext}">
-			<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext -> f:format.raw()}</a>
+			<f:then>
+				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext -> f:format.raw()}</a>
+			</f:then>
+			<f:else>
+				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="prev"><span class="icon-next"></span></a>
+			</f:else>
 		</f:if>
 	</div>
 </f:section>
@@ -147,13 +158,13 @@
 </f:section>
 
 <f:section name="Content">
-	<div class="container-fluid">
+	<div class="container">
 		<flux:content.render area="{elementData.id}" />
 	</div>
 </f:section>
 
 <f:section name="Text">
-	<div class="container-fluid">
+	<div class="container">
 		<f:if condition="{elementData.title}">
 			<{elementData.size}>{elementData.title -> f:format.htmlentities()}</{elementData.size}>
 		</f:if>

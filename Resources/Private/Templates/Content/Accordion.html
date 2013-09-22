@@ -40,17 +40,19 @@
 		<f:if condition="{panel.panel.active}"><v:var.set name="activeTabIndex" value="{iteration.index}" /></f:if>
 	</f:for>
 
-	<div class="accordion" id="accordion-{record.uid}">
+	<div class="panel-group" id="accordion-{record.uid}">
 		<f:for each="{panels}" as="panel" iteration="iteration">
-			<div class="accordion-group">
-				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{record.uid}"
-					   href="#panel-{record.uid}-{iteration.index}">
-						{panel.panel.title}
-					</a>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{record.uid}"
+						   href="#panel-{record.uid}-{iteration.index}">
+							{panel.panel.title}
+						</a>
+					</h4>
 				</div>
-				<div id="panel-{record.uid}-{iteration.index}" class="collapse accordion-body {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
-					<div class="accordion-inner">
+				<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+					<div class="panel-body">
 						<flux:flexform.renderContent area="content.{iteration.index}" />
 					</div>
 				</div>

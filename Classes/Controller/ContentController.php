@@ -73,14 +73,14 @@ class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcont
 	/**
 	 * @return string
 	 */
-	public function fluidRowAction() {
+	public function rowAction() {
 
 	}
 
 	/**
 	 * @return string
 	 */
-	public function heroUnitAction() {
+	public function jumbotronAction() {
 
 	}
 

@@ -51,8 +51,8 @@
       <label index="flux.carousel.fields.settings.carousel.id">DOM element ID (override not necessary but possible)</label>
       <label index="flux.carousel.fields.settings.carousel.innerStyles">Optional CSS rule for the slider area body</label>
       <label index="flux.carousel.fields.settings.carousel.interval">Interval between image changes, in miliseconds (default: 5000)</label>
-      <label index="flux.carousel.fields.settings.carousel.labelNext">Label: next (clear to remove link)</label>
-      <label index="flux.carousel.fields.settings.carousel.labelPrev">Label: previous (clear to remove link)</label>
+      <label index="flux.carousel.fields.settings.carousel.labelNext">Label: next (empty will display default arrow)</label>
+      <label index="flux.carousel.fields.settings.carousel.labelPrev">Label: previous (empty will display default arrow)</label>
       <label index="flux.carousel.fields.settings.carousel.navigationStyles">Optional CSS rule for the navigation dots</label>
       <label index="flux.carousel.fields.settings.carousel.quickselect">Display circle icons for direct selection of slides, default top right corner</label>
       <label index="flux.carousel.fields.settings.carousel.quickselectDotStyles">Optional CSS rule for the quick slide selector dots</label>
@@ -98,7 +98,6 @@
       <label index="flux.pageheader.fields.subheader">Smaller text next to large text</label>
       <label index="flux.row">Bootstrap: Column Row</label>
       <label index="flux.row.description">Adds a wrapper element that lets you define columns of varying widths</label>
-      <label index="flux.row.fields.basic">Basic (non-responsive) row, uses CSS class 'row' instead of 'row-fluid'</label>
       <label index="flux.row.objects.column">Column</label>
       <label index="flux.row.objects.column.addWell">Add 'Well' inside cell</label>
       <label index="flux.row.objects.column.additionalClass">Additional CSS class names</label>
