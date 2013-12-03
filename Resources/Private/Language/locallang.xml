@@ -11,7 +11,6 @@
       <label index="flux.accordion.description">Places child content elements in tabs</label>
       <label index="flux.accordion.objects.panel">Panel</label>
       <label index="flux.accordion.objects.panel.active">Panel is active?</label>
-      <label index="flux.accordion.objects.panel.class">CSS class</label>
       <label index="flux.accordion.objects.panel.title">Panel header/title</label>
       <label index="flux.accordion.sections.panels">Panels</label>
       <label index="flux.accordion.sheets.panels">Panels</label>
