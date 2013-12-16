@@ -11,9 +11,6 @@
 
 		<flux:flexform.sheet name="display">
 			<flux:flexform.field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
-			<f:if condition="{0: mode} == {0: 'tab'}">
-				<flux:flexform.field.select name="tabDirection" items="above,below,left,right" />
-			</f:if>
 			<flux:flexform.field.checkbox name="stackable" />
 			<flux:flexform.field.select name="position" items="default,pull-left,pull-right" />
 		</flux:flexform.sheet>
@@ -57,10 +54,8 @@
 		</f:for>
 	</f:if>
 
-	<div class="tabbable tabs-{tabDirection}">
-		<f:if condition="{0: tabDirection} != {0: 'below'}">
-			<f:render section="Tabs" arguments="{_all}" />
-		</f:if>
+	<div class="tabbable">
+		<f:render section="Tabs" arguments="{_all}" />
 
 		<div class="tab-content">
 			<f:if condition="{tabs}">

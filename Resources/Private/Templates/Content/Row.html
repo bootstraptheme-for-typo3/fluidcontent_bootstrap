@@ -9,7 +9,6 @@
 <f:section name="Configuration">
 	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
 	<flux:flexform wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.checkbox name="basic" />
 		<flux:flexform.section name="columns">
 			<flux:flexform.object name="column">
 				<flux:flexform.field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
@@ -33,7 +32,7 @@
 </f:section>
 
 <f:section name="Main">
-	<div class="row{f:if(condition: basic, else: '-fluid')}">
+	<div class="row">
 		<f:for each="{columns}" as="sectionObject" iteration="iteration">
 			<div class="{sectionObject.column.class}">
 				<f:if condition="{sectionObject.column.addWell}">
@@ -57,6 +56,6 @@
 	<flux:widget.grid />
 </f:section>
 
-<f:section name="Value">span{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
+<f:section name="Value">col-md-{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
 
 </div>

@@ -78,7 +78,7 @@
 								<v:case case="image" break="TRUE">
 									<v:var.set name="imageWidth" value="{width -> v:math.division(b: 12) -> v:math.product(b: object.class)}" />
 									<v:var.set name="imageHeight" value="{ratio -> v:math.division(b: imageWidth)}" />
-									<a href="#" class="thumbnail">
+									<a href="#" class="img-thumbnail">
 										<f:image src="{object.file}" width="{imageWidth}{object.scaling}" height="{imageHeight}{object.scaling}" alt="{object.title}" />
 									</a>
 									<f:if condition="{0: object.header, 1: object.caption} != {0: '', 1: ''}">

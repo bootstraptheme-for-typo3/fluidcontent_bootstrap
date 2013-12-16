@@ -60,7 +60,7 @@
 							<li class="nav-header {object.class}"><f:format.raw>{icon}{object.text}</f:format.raw></li>
 						</v:case>
 						<v:case case="divider" break="TRUE">
-							<li class="divider {object.class}"></li>
+							<li class="nav-divider {object.class}"></li>
 						</v:case>
 						<v:case case="default">
 							<v:var.set name="icon" value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}" />
