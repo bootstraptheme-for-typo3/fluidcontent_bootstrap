@@ -31,3 +31,5 @@ When inserted, each content element contains a special panel with configuration 
 
 * https://github.com/FluidTYPO3/fluidcontent is a dependency - it is the integration necessary to render Fluid Content Elements
 * https://github.com/FluidTYPO3/vhs is dependency providing many ViewHelpers used in the Fluid Content Element templates
+
+![Please forgive the tracking - your data is in good hands!](https://fedext.net/bigbrother.php?repository=fluidcontent_bootstrap)

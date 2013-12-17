@@ -1,4 +1,5 @@
 <?php
+namespace FluidTYPO3\FluidcontentBootstrap\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -23,6 +24,8 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use FluidTYPO3\Fluidcontent\Controller\AbstractContentController;
+
 /**
  * Content Controller
  *
@@ -33,7 +36,7 @@
  * @subpackage Controller
  * @route off
  */
-class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcontent_Controller_AbstractContentController {
+class ContentController extends AbstractContentController {
 
 	/**
 	 * @return string
