@@ -1,9 +1,20 @@
- {
-     "name": "fluidtypo3/fluidcontent_bootstrap",
-     "description": "The fluidcontent_bootstrap package from FluidTYPO3",
-     "require": {
-         "fluidtypo3/flux": "*",
-         "fluidtypo3/vhs": "*"
-     },
-     "type": "typo3-cms-extension"
-  }
+{
+	"name": "fluidtypo3/fluidcontent_bootstrap",
+	"description": "The fluidcontent_bootstrap package from FluidTYPO3",
+	"require": {
+		"fluidtypo3/flux": "*",
+		"fluidtypo3/fluidcontent": "*",
+		"fluidtypo3/vhs": "*"
+	},
+	"type": "typo3-cms-extension",
+	"keywords": ["TYPO3 CMS", "templating", "bootstrap", "flux", "fluidcontent", "fedext", "fluid"],
+	"homepage": "http://fedext.net",
+	"license": "GPL-2.0+",
+	"support": {
+		"irc": "irc://irc.freenode.org/fedext",
+		"issues": "https://github.com/FluidTYPO3/fluidcontent_bootstrap/issues"
+	},
+	"suggest": {
+		"fluidtypo3/fluidpages": "Gives the ability to render Page Templates with pure fluid."
+	}
+}
