@@ -1,4 +1,4 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
@@ -7,19 +7,19 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="alert" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="header" />
-		<flux:flexform.field.input name="closeLinkText" />
-		<flux:flexform.field.select name="class" items="warning,info,success,danger" default="default" />
-		<flux:flexform.field.checkbox name="isBlock" />
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
-				<flux:flexform.grid.column>
-					<flux:flexform.content name="content" />
-				</flux:flexform.grid.column>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
+	<flux:form wizardTab="Bootstrap" id="alert" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:field.input name="header" />
+		<flux:field.input name="closeLinkText" />
+		<flux:field.select name="class" items="warning,info,success,danger" default="default" />
+		<flux:field.checkbox name="isBlock" />
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+					<flux:form.content name="content" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">

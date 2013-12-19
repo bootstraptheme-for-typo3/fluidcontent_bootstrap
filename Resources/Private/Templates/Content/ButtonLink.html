@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
@@ -7,36 +7,36 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="buttonlink" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="target">
-			<flux:flexform.field.wizard.link />
-		</flux:flexform.field.input>
-		<flux:flexform.field.input name="text" />
-		<flux:flexform.field.checkbox name="tooltip" />
-		<flux:flexform.field.input name="title" />
-		<flux:flexform.field.input name="iconClass" />
-		<flux:flexform.field.select name="iconPlacement" items="left,right" />
-		<flux:flexform.field.select name="size" items="default,mini,small,large" size="1" maxItems="1" />
-		<flux:flexform.field.checkbox name="block" />
-		<flux:flexform.field.select name="class" items="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
-		<flux:flexform.field.input name="additionalClassNames" />
-		<flux:flexform.field.select name="wrapTag" items="none,span,p,div,dt,dd,fieldset" />
-		<flux:flexform.sheet name="addons">
-			<flux:flexform.section name="addons">
-				<flux:flexform.object name="popover">
-					<flux:flexform.field.input name="title" />
-					<flux:flexform.field.input name="content" />
-				</flux:flexform.object>
-				<flux:flexform.object name="modal">
-					<flux:flexform.field.input name="title" />
-					<flux:flexform.field.relation name="content" table="tt_content">
-						<flux:flexform.field.wizard.add table="tt_content" />
-						<flux:flexform.field.wizard.edit />
-					</flux:flexform.field.relation>
-				</flux:flexform.object>
-			</flux:flexform.section>
-		</flux:flexform.sheet>
-	</flux:flexform>
+	<flux:form wizardTab="Bootstrap" id="buttonlink" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:field.input name="target">
+			<flux:wizard.link />
+		</flux:field.input>
+		<flux:field.input name="text" />
+		<flux:field.checkbox name="tooltip" />
+		<flux:field.input name="title" />
+		<flux:field.input name="iconClass" />
+		<flux:field.select name="iconPlacement" items="left,right" />
+		<flux:field.select name="size" items="default,mini,small,large" size="1" maxItems="1" />
+		<flux:field.checkbox name="block" />
+		<flux:field.select name="class" items="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
+		<flux:field.input name="additionalClassNames" />
+		<flux:field.select name="wrapTag" items="none,span,p,div,dt,dd,fieldset" />
+		<flux:form.sheet name="addons">
+			<flux:form.section name="addons">
+				<flux:form.object name="popover">
+					<flux:field.input name="title" />
+					<flux:field.input name="content" />
+				</flux:form.object>
+				<flux:form.object name="modal">
+					<flux:field.input name="title" />
+					<flux:field.relation name="content" table="tt_content">
+						<flux:wizard.add table="tt_content" />
+						<flux:wizard.edit />
+					</flux:field.relation>
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">

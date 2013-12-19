@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
@@ -7,35 +7,35 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="navigationlist" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.sheet name="display">
-			<flux:flexform.field.checkbox name="addWell" />
-			<flux:flexform.field.checkbox name="zeroPadding" />
-			<flux:flexform.field.input name="class" />
-		</flux:flexform.sheet>
-		<flux:flexform.sheet name="items">
-			<flux:flexform.section name="items">
-				<flux:flexform.object name="header">
-					<flux:flexform.field.input name="text" />
-					<flux:flexform.field.input name="class" />
-				</flux:flexform.object>
-				<flux:flexform.object name="item">
-					<flux:flexform.field.input name="text" />
-					<flux:flexform.field.input name="tooltip" />
-					<flux:flexform.field.input name="icon" eval="trim">
-						<flux:flexform.field.wizard.link />
-					</flux:flexform.field.input>
-					<flux:flexform.field.input name="target">
-						<flux:flexform.field.wizard.link />
-					</flux:flexform.field.input>
-					<flux:flexform.field.input name="class" />
-				</flux:flexform.object>
-				<flux:flexform.object name="divider">
-					<flux:flexform.field.input name="class" />
-				</flux:flexform.object>
-			</flux:flexform.section>
-		</flux:flexform.sheet>
-	</flux:flexform>
+	<flux:form wizardTab="Bootstrap" id="navigationlist" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:form.sheet name="display">
+			<flux:field.checkbox name="addWell" />
+			<flux:field.checkbox name="zeroPadding" />
+			<flux:field.input name="class" />
+		</flux:form.sheet>
+		<flux:form.sheet name="items">
+			<flux:form.section name="items">
+				<flux:form.object name="header">
+					<flux:field.input name="text" />
+					<flux:field.input name="class" />
+				</flux:form.object>
+				<flux:form.object name="item">
+					<flux:field.input name="text" />
+					<flux:field.input name="tooltip" />
+					<flux:field.input name="icon" eval="trim">
+						<flux:wizard.link />
+					</flux:field.input>
+					<flux:field.input name="target">
+						<flux:wizard.link />
+					</flux:field.input>
+					<flux:field.input name="class" />
+				</flux:form.object>
+				<flux:form.object name="divider">
+					<flux:field.input name="class" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">
