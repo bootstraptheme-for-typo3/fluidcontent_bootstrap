@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
@@ -15,12 +15,12 @@
 		<flux:flexform.field.checkbox name="tooltip" />
 		<flux:flexform.field.input name="title" />
 		<flux:flexform.field.input name="iconClass" />
-		<flux:flexform.field.select name="iconPlacement" />
-		<flux:flexform.field.select name="size" commaSeparatedItems="default,mini,small,large" size="1" maxItems="1" />
+		<flux:flexform.field.select name="iconPlacement" items="left,right" />
+		<flux:flexform.field.select name="size" items="default,mini,small,large" size="1" maxItems="1" />
 		<flux:flexform.field.checkbox name="block" />
-		<flux:flexform.field.select name="class" commaSeparatedItems="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
+		<flux:flexform.field.select name="class" items="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
 		<flux:flexform.field.input name="additionalClassNames" />
-		<flux:flexform.field.select name="wrapTag" commaSeparatedItems="none,span,p,div,dt,dd,fieldset" />
+		<flux:flexform.field.select name="wrapTag" items="none,span,p,div,dt,dd,fieldset" />
 		<flux:flexform.sheet name="addons">
 			<flux:flexform.section name="addons">
 				<flux:flexform.object name="popover">
@@ -29,10 +29,10 @@
 				</flux:flexform.object>
 				<flux:flexform.object name="modal">
 					<flux:flexform.field.input name="title" />
-					<flux:flexform.field.group name="content" internalType="db" allowed="tt_content">
+					<flux:flexform.field.relation name="content" table="tt_content">
 						<flux:flexform.field.wizard.add table="tt_content" />
 						<flux:flexform.field.wizard.edit />
-					</flux:flexform.field.group>
+					</flux:flexform.field.relation>
 				</flux:flexform.object>
 			</flux:flexform.section>
 		</flux:flexform.sheet>
@@ -64,7 +64,7 @@
 			</f:link.page>
 		</f:then>
 		<f:else>
-			<a href="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+			<a href="{v:uri.typolink(configuration: '{parameter: target}')}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
 				<f:render section="Text" arguments="{_all}" />
 			</a>
 		</f:else>

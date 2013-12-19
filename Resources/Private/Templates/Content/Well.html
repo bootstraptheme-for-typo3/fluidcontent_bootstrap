@@ -1,4 +1,4 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
@@ -14,7 +14,7 @@
 			</flux:flexform.grid.row>
 		</flux:flexform.grid>
 		<flux:flexform.field.select name="wellStyle" label="Optional Well Style Class"
-			commaSeparatedItems="small, normal, large" default="normal" />
+			items="small, normal, large" default="normal" />
 	</flux:flexform>
 </f:section>
 
@@ -23,7 +23,7 @@
 </f:section>
 
 <f:section name="Main">
-	<div class="well{f:if(condition: '{0: wellStyle} != {0: "normal"}', then: ' well-{wellStyle}')}">
+	<div class="well{f:if(condition: '{0: wellStyle} != {0: \'normal\'}', then: ' well-{wellStyle}')}">
 		<flux:content.render area="content" />
 	</div>
 </f:section>
