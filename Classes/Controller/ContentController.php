@@ -1,4 +1,5 @@
 <?php
+namespace FluidTYPO3\FluidcontentBootstrap\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -23,17 +24,19 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use FluidTYPO3\Fluidcontent\Controller\AbstractContentController;
+
 /**
  * Content Controller
  *
  * Controller which is used to render individual elements from
  * the fluidcontent_bootstrap collection.
  *
- * @package FluidpagesBootstrap
+ * @package FluidcontentBootstrap
  * @subpackage Controller
  * @route off
  */
-class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcontent_Controller_AbstractContentController {
+class ContentController extends AbstractContentController {
 
 	/**
 	 * @return string
@@ -41,24 +44,28 @@ class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcont
 	public function accordionAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
 	public function alertAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
 	public function buttonGroupAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
 	public function buttonLinkAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
@@ -69,22 +76,24 @@ class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcont
 	/**
 	 * @return string
 	 */
-	public function fluidRowAction() {
+	public function rowAction() {
 
 	}
 
 	/**
 	 * @return string
 	 */
-	public function heroUnitAction() {
+	public function jumbotronAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
 	public function navigationListAction() {
 
 	}
+
 	/**
 	 * @return string
 	 */
