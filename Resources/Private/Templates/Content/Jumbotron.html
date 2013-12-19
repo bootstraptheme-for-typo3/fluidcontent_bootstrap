@@ -1,17 +1,17 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="herounit" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
-				<flux:flexform.grid.column>
-					<flux:flexform.content name="content" />
-				</flux:flexform.grid.column>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
+	<flux:form wizardTab="Bootstrap" id="herounit" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+					<flux:form.content name="content" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">

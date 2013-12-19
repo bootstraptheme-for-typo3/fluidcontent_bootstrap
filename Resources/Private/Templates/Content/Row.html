@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
@@ -8,27 +8,27 @@
 
 <f:section name="Configuration">
 	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
-	<flux:flexform wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.section name="columns">
-			<flux:flexform.object name="column">
-				<flux:flexform.field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
+	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:form.section name="columns">
+			<flux:form.object name="column">
+				<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
 				    -> v:iterator.loop(count: settings.gridColumns, iteration: 'iteration', minimum: 1)}" label="Columns: {settings.gridColumns}" />
-				<flux:flexform.field.checkbox name="addWell" />
-				<flux:flexform.field.input name="additionalClass" />
-			</flux:flexform.object>
-		</flux:flexform.section>
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
+				<flux:field.checkbox name="addWell" />
+				<flux:field.input name="additionalClass" />
+			</flux:form.object>
+		</flux:form.section>
+		<flux:grid>
+			<flux:grid.row>
 				<f:for each="{columns}" as="sectionObject" iteration="iteration">
 					<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
 					<v:var.set name="percent" value="{width  -> v:math.division(b: settings.gridColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
-					<flux:flexform.grid.column style="width: {percent}%">
-						<flux:flexform.content name="column{iteration.cycle}" label="{percent}%" />
-					</flux:flexform.grid.column>
+					<flux:grid.column style="width: {percent}%">
+						<flux:form.content name="column{iteration.cycle}" label="{percent}%" />
+					</flux:grid.column>
 				</f:for>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
 </f:section>
 
 <f:section name="Main">

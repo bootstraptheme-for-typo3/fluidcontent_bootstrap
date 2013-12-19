@@ -1,13 +1,13 @@
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 
 <f:layout name="FCE" />
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="pageheader" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.field.input name="header" />
-		<flux:flexform.field.input name="subheader" />
-	</flux:flexform>
+	<flux:form wizardTab="Bootstrap" id="pageheader" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+		<flux:field.input name="header" />
+		<flux:field.input name="subheader" />
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">

@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
@@ -7,37 +7,37 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="tabs" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+	<flux:form wizardTab="Bootstrap" id="tabs" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
 
-		<flux:flexform.sheet name="display">
-			<flux:flexform.field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
-			<flux:flexform.field.checkbox name="stackable" />
-			<flux:flexform.field.select name="position" items="default,pull-left,pull-right" />
-		</flux:flexform.sheet>
+		<flux:form.sheet name="display">
+			<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
+			<flux:field.checkbox name="stackable" />
+			<flux:field.select name="position" items="default,pull-left,pull-right" />
+		</flux:form.sheet>
 
-		<flux:flexform.sheet name="tabs">
-			<flux:flexform.section name="tabs">
-				<flux:flexform.object name="tab">
-					<flux:flexform.field.input name="title" />
-					<flux:flexform.field.input name="class" />
-					<flux:flexform.field.checkbox name="active" />
-					<flux:flexform.field.checkbox name="fade" />
-				</flux:flexform.object>
-			</flux:flexform.section>
-		</flux:flexform.sheet>
+		<flux:form.sheet name="tabs">
+			<flux:form.section name="tabs">
+				<flux:form.object name="tab">
+					<flux:field.input name="title" />
+					<flux:field.input name="class" />
+					<flux:field.checkbox name="active" />
+					<flux:field.checkbox name="fade" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
 
-		<flux:flexform.grid>
-			<flux:flexform.grid.row>
+		<flux:grid>
+			<flux:grid.row>
 				<f:if condition="{tabs}">
 					<f:for each="{tabs}" as="tab" iteration="iteration">
-						<flux:flexform.grid.column style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%">
-							<flux:flexform.content name="content.{iteration.index}" label="Tab {iteration.cycle}" />
-						</flux:flexform.grid.column>
+						<flux:grid.column style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%">
+							<flux:form.content name="content.{iteration.index}" label="Tab {iteration.cycle}" />
+						</flux:grid.column>
 					</f:for>
 				</f:if>
-			</flux:flexform.grid.row>
-		</flux:flexform.grid>
-	</flux:flexform>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
 </f:section>
 
 <f:section name="Preview">
