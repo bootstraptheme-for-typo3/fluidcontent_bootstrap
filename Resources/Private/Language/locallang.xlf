@@ -235,7 +235,7 @@
         <source>CSS rule for inside of carousel</source>
       </trans-unit>
       <trans-unit id="flux.navigationlist.sheets.display" xml:space="preserve">
-        <source>flux.navigationlist.sheets.display</source>
+        <source>Display</source>
       </trans-unit>
       <trans-unit id="flux.navigationlist.fields.addWell" xml:space="preserve">
         <source>Add well wrapper</source>
