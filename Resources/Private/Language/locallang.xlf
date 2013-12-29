@@ -73,7 +73,7 @@
         <source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
       </trans-unit>
       <trans-unit id="flux.well" xml:space="preserve">
-        <source>Content well</source>
+        <source>Bootstrap: Content well</source>
       </trans-unit>
       <trans-unit id="flux.well.description" xml:space="preserve">
         <source>Visual well for other content elements</source>
