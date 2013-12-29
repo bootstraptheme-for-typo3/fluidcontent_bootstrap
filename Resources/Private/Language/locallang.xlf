@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" product-name="fluidcontent_bootstrap" date="2013-12-27T21:24:23+01:00">
+  <file source-language="en" datatype="plaintext" original="messages" product-name="fluidcontent_bootstrap" date="2013-12-29T23:30:39+01:00">
     <header/>
     <body>
       <trans-unit id="flux.accordion" xml:space="preserve">
@@ -383,6 +383,9 @@
       </trans-unit>
       <trans-unit id="flux.thumbnails.objects.content.message" xml:space="preserve">
         <source> </source>
+      </trans-unit>
+      <trans-unit id="flux.well.areas.content" xml:space="preserve">
+        <source>Content elements</source>
       </trans-unit>
     </body>
   </file>
