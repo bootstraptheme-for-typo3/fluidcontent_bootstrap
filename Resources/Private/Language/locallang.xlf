@@ -19,7 +19,7 @@
         <source>Bootstrap: Button Group</source>
       </trans-unit>
       <trans-unit id="flux.buttongroup.description" xml:space="preserve">
-        <source>Renders Twitter Bootstrap button elements added as child content elements in a botton grouping wrapper which closely aligns the buttons/links.</source>
+        <source>Renders Twitter Bootstrap button elements added as child content elements in a button grouping wrapper which closely aligns the buttons/links.</source>
       </trans-unit>
       <trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
         <source>Buttons</source>
