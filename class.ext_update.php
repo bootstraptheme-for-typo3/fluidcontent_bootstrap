@@ -2,7 +2,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2013 Claus Due <claus@wildside.dk>, Wildside A/S
+ *  (c) 2013 Claus Due <claus@namelesscoder.net>
  *
  *  All rights reserved
  *
@@ -26,7 +26,7 @@
 /**
  * Updater Script for fluidcontent_bootstrap
  *
- * @author Claus Due <claus@wildside.dk>
+ * @author Claus Due <claus@namelesscoder.net>
  * @author Fabien Udriot <fabien.udriot@ecodev.ch>
  * @package FluidcontentBootstrap
  */
