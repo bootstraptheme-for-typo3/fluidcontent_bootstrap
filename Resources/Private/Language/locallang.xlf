@@ -36,10 +36,10 @@
       <trans-unit id="flux.carousel.description" xml:space="preserve">
         <source>Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change.</source>
       </trans-unit>
-      <trans-unit id="flux.herounit" xml:space="preserve">
-        <source>Bootstrap: Hero Unit</source>
+      <trans-unit id="flux.jumbotron" xml:space="preserve">
+        <source>Bootstrap: Jumbotron</source>
       </trans-unit>
-      <trans-unit id="flux.herounit.description" xml:space="preserve">
+      <trans-unit id="flux.jumbotron.description" xml:space="preserve">
         <source>A very large header-type element into which you can insert other content elements.</source>
       </trans-unit>
       <trans-unit id="flux.navigationlist" xml:space="preserve">
