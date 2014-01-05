@@ -8,7 +8,7 @@
 
 <f:section name="Configuration">
 	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
-	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
+	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
 		<flux:form.section name="columns">
 			<flux:form.object name="column">
 				<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
