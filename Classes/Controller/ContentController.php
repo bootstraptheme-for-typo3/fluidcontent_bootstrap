@@ -41,7 +41,7 @@ class ContentController extends AbstractContentController {
 	/**
 	 * @return string
 	 */
-	public function accordionAction() {
+	public function collapseAction() {
 
 	}
 

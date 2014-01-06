@@ -3,11 +3,11 @@
   <file source-language="en" datatype="plaintext" original="messages" product-name="fluidcontent_bootstrap" date="2013-12-29T23:30:39+01:00">
     <header/>
     <body>
-      <trans-unit id="flux.accordion" xml:space="preserve">
-        <source>Bootstrap: Accordion with content elements</source>
+      <trans-unit id="flux.collapse" xml:space="preserve">
+        <source>Bootstrap: Collapsible content elements</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.description" xml:space="preserve">
-        <source>Accordion element container</source>
+      <trans-unit id="flux.collapse.description" xml:space="preserve">
+        <source>Collapsible element container</source>
       </trans-unit>
       <trans-unit id="flux.alert" xml:space="preserve">
         <source>Bootstrap: Alert (inline)</source>
@@ -78,19 +78,19 @@
       <trans-unit id="flux.well.description" xml:space="preserve">
         <source>Visual well for other content elements</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.sheets.panels" xml:space="preserve">
+      <trans-unit id="flux.collapse.sheets.panels" xml:space="preserve">
         <source>Panels</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.sections.panels" xml:space="preserve">
+      <trans-unit id="flux.collapse.sections.panels" xml:space="preserve">
         <source>Panels</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.objects.panel" xml:space="preserve">
+      <trans-unit id="flux.collapse.objects.panel" xml:space="preserve">
         <source>Panel</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.objects.panel.title" xml:space="preserve">
+      <trans-unit id="flux.collapse.objects.panel.title" xml:space="preserve">
         <source>Panel header/title</source>
       </trans-unit>
-      <trans-unit id="flux.accordion.objects.panel.active" xml:space="preserve">
+      <trans-unit id="flux.collapse.objects.panel.active" xml:space="preserve">
         <source>Panel is active?</source>
       </trans-unit>
       <trans-unit id="flux.alert.fields.header" xml:space="preserve">
