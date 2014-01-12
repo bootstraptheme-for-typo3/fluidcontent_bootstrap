@@ -7,11 +7,13 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
+	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
 	<flux:flexform wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
 		<flux:flexform.field.checkbox name="basic" />
 		<flux:flexform.section name="columns">
 			<flux:flexform.object name="column">
-				<flux:flexform.field.select name="class" commaSeparatedItems="span1,span2,span3,span4,span5,span6,span7,span8,span9,span10,span11,span12" />
+				<flux:flexform.field.select name="class" commaSeparatedItems="{f:render(section: 'Value', arguments: {iteration: iteration})
+				    -> v:iterator.loop(count: settings.gridColumns, iteration: 'iteration', minimum: 1)}" label="Columns: {settings.gridColumns}" />
 				<flux:flexform.field.checkbox name="addWell" />
 				<flux:flexform.field.input name="additionalClass" />
 			</flux:flexform.object>
@@ -20,7 +22,7 @@
 			<flux:flexform.grid.row>
 				<f:for each="{columns}" as="sectionObject" iteration="iteration">
 					<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
-					<v:var.set name="percent" value="{width  -> v:math.division(b: 12) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+					<v:var.set name="percent" value="{width  -> v:math.division(b: settings.gridColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
 					<flux:flexform.grid.column style="width: {percent}%">
 						<flux:flexform.content name="column{iteration.cycle}" label="{percent}%" />
 					</flux:flexform.grid.column>
@@ -55,4 +57,7 @@
 	<flux:widget.grid />
 </f:section>
 
+<f:section name="Value">
+	{f:if(condition: 'settings.bootstrapVersion < 3', then: 'span', else: 'col-md-')}{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}
+</f:section>
 </div>

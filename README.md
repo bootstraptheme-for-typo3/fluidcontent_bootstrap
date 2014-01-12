@@ -25,6 +25,8 @@ types when inserting new content.
 
 When inserted, each content element contains a special panel with configuration specifying how to render the content element.
 
+Set the Twitter Bootstrap Version in template constants.
+
 ## References
 
 * https://github.com/FluidTYPO3/fluidcontent is a dependency - it is the integration necessary to render Fluid Content Elements

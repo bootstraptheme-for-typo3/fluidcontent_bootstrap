@@ -6,3 +6,7 @@ plugin.tx_fluidcontentbootstrap.view {
 	partialRootPath = EXT:flux/Resources/Private/Partials/
 	layoutRootPath = EXT:fluidcontent/Resources/Private/Layouts/
 }
+plugin.tx_fluidcontentbootstrap.settings {
+	bootstrapVersion = {$plugin.tx_fluidcontentbootstrap.settings.bootstrapVersion}
+	gridColumns = {$plugin.tx_fluidcontentbootstrap.settings.gridColumns}
+}
