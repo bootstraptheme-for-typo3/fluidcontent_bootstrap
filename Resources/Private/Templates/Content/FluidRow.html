@@ -58,6 +58,6 @@
 </f:section>
 
 <f:section name="Value">
-	{f:if(condition: 'settings.bootstrapVersion < 3', then: 'span', else: 'col-md-')}{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}
+	{f:if(condition: '{settings.bootstrapVersion} < 3', then: 'span', else: 'col-md-')}{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}
 </f:section>
 </div>
