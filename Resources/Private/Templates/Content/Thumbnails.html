@@ -72,7 +72,7 @@
 		<f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
 			<f:for each="{itemSectionObjects}" as="object" key="objectType">
 				<f:if condition="{object.disabled} < 1">
-					<li class="span{object.class}">
+					<li class="{f:if(condition: '{settings.bootstrapVersion} < 3', then: 'span', else: 'col-md-')}{object.class}">
 						<div class="{f:if(condition: object.addWell, then: 'well')}">
 							<v:switch value="{objectType}">
 								<v:case case="image" break="TRUE">

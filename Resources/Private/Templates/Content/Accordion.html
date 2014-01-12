@@ -49,11 +49,22 @@
 						{panel.panel.title}
 					</a>
 				</div>
-				<div id="panel-{record.uid}-{iteration.index}" class="collapse accordion-body {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
-					<div class="accordion-inner">
-						<flux:flexform.renderContent area="content.{iteration.index}" />
-					</div>
-				</div>
+				<f:if condition="{settings.bootstrapVersion} < 3">
+					<f:then>
+						<div id="panel-{record.uid}-{iteration.index}" class="collapse accordion-body {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+							<div class="accordion-inner">
+								<flux:flexform.renderContent area="content.{iteration.index}" />
+							</div>
+						</div>
+					</f:then>
+					<f:else>
+						<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+							<div class="panel-body">
+								<flux:flexform.renderContent area="content.{iteration.index}" />
+							</div>
+						</div>
+					</f:else>
+				</f:if>
 			</div>
 		</f:for>
 	</div>

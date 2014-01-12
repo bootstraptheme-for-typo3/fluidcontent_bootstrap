@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Fluid Content: Twitter Bootstrap Elements',
-	'description' => 'A collection of Twitter Boostrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs',
+	'description' => 'A collection of Twitter Boostrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs, forked by Peter Murray <peter@vista-interactive.com> for  Twitter Bootstrap version 3',
 	'category' => 'misc',
 	'author' => 'Claus Due',
 	'author_email' => 'claus@wildside.dk',
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
-	'version' => '2.0.0',
+	'version' => '3.0.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '4.5-0.0.0',

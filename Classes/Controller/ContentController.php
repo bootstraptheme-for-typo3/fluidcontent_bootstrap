@@ -73,10 +73,18 @@ class Tx_FluidcontentBootstrap_Controller_ContentController extends Tx_Fluidcont
 
 	}
 
-	/**
+	/** 
+	 * hero unit replaced with jumbotron in TwitterBootstrap version 3
 	 * @return string
 	 */
 	public function heroUnitAction() {
+
+	}
+	/**
+	 * jumbotron replaces hero unit in TwitterBootstrap version 3
+	 * @return string
+	 */
+	public function jumbotronAction() {
 
 	}
 	/**
