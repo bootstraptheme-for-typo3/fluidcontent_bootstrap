@@ -52,7 +52,7 @@
 				</div>
 				<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
 					<div class="panel-body">
-						<flux:flexform.renderContent area="content.{iteration.index}" />
+						<flux:content.render area="content.{iteration.index}" />
 					</div>
 				</div>
 			</div>

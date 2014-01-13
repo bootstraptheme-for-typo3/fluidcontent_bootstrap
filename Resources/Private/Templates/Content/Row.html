@@ -38,12 +38,12 @@
 				<f:if condition="{sectionObject.column.addWell}">
 					<f:then>
 						<div class="well{f:if(condition: sectionObject.column.additionalClass, then: ' {sectionObject.column.additionalClass}')}">
-							<flux:flexform.renderContent area="column{iteration.cycle}" />
+							<flux:content.render area="column{iteration.cycle}" />
 						</div>
 					</f:then>
 					<f:else>
 						<div{f:if(condition: sectionObject.column.additionalClass, then: ' class="{sectionObject.column.additionalClass}"')}>
-							<flux:flexform.renderContent area="column{iteration.cycle}" />
+							<flux:content.render area="column{iteration.cycle}" />
 						</div>
 					</f:else>
 				</f:if>

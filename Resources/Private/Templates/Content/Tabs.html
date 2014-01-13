@@ -61,7 +61,7 @@
 			<f:if condition="{tabs}">
 				<f:for each="{tabs}" as="tab" iteration="iteration">
 					<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')}" id="tab-{record.uid}-{iteration.index}">
-						<flux:flexform.renderContent area="content.{iteration.index}" />
+						<flux:content.render area="content.{iteration.index}" />
 					</div>
 				</f:for>
 			</f:if>
