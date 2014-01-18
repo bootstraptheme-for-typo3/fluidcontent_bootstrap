@@ -8,11 +8,12 @@
 
 <f:section name="Configuration">
 	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
+	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:var.set(name: 'numberOfColumns')}
 	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
 		<flux:form.section name="columns">
 			<flux:form.object name="column">
 				<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
-				    -> v:iterator.loop(count: settings.gridColumns, iteration: 'iteration', minimum: 1)}" label="Columns: {settings.gridColumns}" />
+				    -> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
 				<flux:field.checkbox name="addWell" />
 				<flux:field.input name="additionalClass" />
 			</flux:form.object>
@@ -21,7 +22,7 @@
 			<flux:grid.row>
 				<f:for each="{columns}" as="sectionObject" iteration="iteration">
 					<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
-					<v:var.set name="percent" value="{width  -> v:math.division(b: settings.gridColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+					<v:var.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
 					<flux:grid.column style="width: {percent}%">
 						<flux:form.content name="column{iteration.cycle}" label="{percent}%" />
 					</flux:grid.column>
