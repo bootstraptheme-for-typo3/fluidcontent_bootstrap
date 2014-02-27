@@ -60,7 +60,7 @@
 		<div class="tab-content">
 			<f:if condition="{tabs}">
 				<f:for each="{tabs}" as="tab" iteration="iteration">
-					<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')}" id="tab-{record.uid}-{iteration.index}">
+					<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}" id="tab-{record.uid}-{iteration.index}">
 						<flux:content.render area="content.{iteration.index}" />
 					</div>
 				</f:for>
@@ -77,7 +77,7 @@
 	<f:if condition="{tabs}">
 		<ul class="nav nav-{mode}s {f:if(condition: stackable, then: 'nav-stacked')} {position}">
 			<f:for each="{tabs}" as="tab" iteration="iteration">
-				<li class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')}">
+				<li class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')} {f:if(condition: tab.tab.class, then: 'tab-{tab.tab.class}')}">
 					<a href="{v:page.absoluteUrl()}#tab-{record.uid}-{iteration.index}" data-toggle="{mode}">{tab.tab.title}</a>
 				</li>
 			</f:for>
