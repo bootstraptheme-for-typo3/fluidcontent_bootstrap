@@ -15,6 +15,7 @@
 		<flux:field.input name="settings.carousel.labelNext" default="" />
 		<flux:field.input name="settings.carousel.labelPrev" default="" />
 		<flux:field.input name="settings.carousel.width" default="1170c" />
+		<flux:field.checkbox name="settings.carousel.autostart" />
 		<flux:grid>
 			<f:for each="{elements}" as="element" iteration="iteration">
 				<f:for each="{element}" key="elementType" as="elementData">
@@ -108,7 +109,7 @@
 			}
 		</v:asset.style>
 	</f:if>
-	<div id="{settings.carousel.id}" class="{settings.carousel.id} carousel slide" data-interval="{settings.carousel.interval}">
+	<div id="{settings.carousel.id}" class="{settings.carousel.id} carousel slide" data-interval="{settings.carousel.interval}"{f:if(condition: settings.carousel.autostart, then: ' data-ride="carousel"')}>
 		<f:if condition="{settings.carousel.quickselect}">
 			<ol class="carousel-indicators">
 				<f:for each="{elements}" as="image" iteration="iteration">
