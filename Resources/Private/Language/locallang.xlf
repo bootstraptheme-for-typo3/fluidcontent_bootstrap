@@ -222,6 +222,9 @@
 			<trans-unit id="flux.carousel.fields.void" xml:space="preserve">
 				<source> </source>
 			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.autostart" xml:space="preserve">
+				<source>Should the carousel start sliding on page-load?</source>
+			</trans-unit>
 			<trans-unit id="flux.carousel.fields.settings.carousel.quickselectStyles" xml:space="preserve">
 				<source>Optional CSS rule for the quick slide selector dots container</source>
 			</trans-unit>
