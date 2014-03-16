@@ -69,6 +69,9 @@
 			<trans-unit id="flux.thumbnails" xml:space="preserve">
 				<source>Bootstrap: Thumbnail Grid</source>
 			</trans-unit>
+			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
 			<trans-unit id="flux.thumbnails.description" xml:space="preserve">
 				<source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
 			</trans-unit>
