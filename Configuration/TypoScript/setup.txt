@@ -1,8 +1,12 @@
 [GLOBAL]
 plugin.tx_fluidcontentbootstrap.view {
 	label = Fluid Content Elements - Twitter Bootstrap
-	extensionKey = fluidcontent_bootstrap
+	extensionKey = FluidTYPO3.FluidcontentBootstrap
 	templateRootPath = EXT:fluidcontent_bootstrap/Resources/Private/Templates/
 	partialRootPath = EXT:flux/Resources/Private/Partials/
 	layoutRootPath = EXT:fluidcontent/Resources/Private/Layouts/
+}
+
+plugin.tx_fluidcontentbootstrap.settings {
+	gridColumns = {$plugin.tx_fluidcontentbootstrap.settings.gridColumns}
 }

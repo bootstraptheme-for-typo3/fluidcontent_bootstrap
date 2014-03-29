@@ -1,12 +1,9 @@
-{namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Content" />
-<div xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="buttongroup" icon="{v:extension.path.resources(path: 'Icons/icon-buttongroup.gif')}">
+	<flux:form wizardTab="Bootstrap" id="jumbotron" icon="{v:extension.path.resources(path: 'Icons/icon-jumbotron.gif')}">
 		<flux:grid>
 			<flux:grid.row>
 				<flux:grid.column>
@@ -22,9 +19,7 @@
 </f:section>
 
 <f:section name="Main">
-	<div class="btn-group">
+	<div class="jumbotron">
 		<flux:content.render area="content" />
 	</div>
 </f:section>
-
-</div>

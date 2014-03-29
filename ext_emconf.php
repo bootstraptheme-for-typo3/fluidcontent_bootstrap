@@ -12,10 +12,10 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Fluid Content: Twitter Bootstrap Elements',
-	'description' => 'A collection of Twitter Boostrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs',
+	'description' => 'A collection of Twitter Bootstrap oriented Fluid Content Elements written for EXT:fluidcontent using ViewHelpers from EXT:vhs',
 	'category' => 'misc',
 	'author' => 'Claus Due',
-	'author_email' => 'claus@wildside.dk',
+	'author_email' => 'claus@namelesscoder.net',
 	'author_company' => 'Wildside A/S',
 	'shy' => '',
 	'dependencies' => 'cms,fluidcontent,vhs',
@@ -32,7 +32,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '2.0.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '4.5-0.0.0',
+			'typo3' => '6.1.00-6.2.99',
 			'cms' => '',
 			'fluidcontent' => '',
 			'vhs' => '',

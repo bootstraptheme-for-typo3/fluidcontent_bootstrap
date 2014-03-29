@@ -1,66 +1,66 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=Tx_Flux_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:flexform wizardTab="Bootstrap" id="thumbnails" icon="{v:extension.path.resources(path: 'Icons/icon-twitter.png')}">
-		<flux:flexform.sheet name="thumbnails">
-			<flux:flexform.field.input name="width" default="960" />
-			<flux:flexform.field.input name="ratio" default="16/9" />
-			<flux:flexform.section name="thumbnails">
+	<flux:form wizardTab="Bootstrap" id="thumbnails" icon="{v:extension.path.resources(path: 'Icons/icon-thumbnails.gif')}">
+		<flux:form.sheet name="thumbnails">
+			<flux:field.input name="width" default="960" />
+			<flux:field.input name="ratio" default="16/9" />
+			<flux:form.section name="thumbnails">
 				<f:render section="ImageObject" arguments="{_all}" />
 				<f:render section="ContentObject" arguments="{_all}" />
-			</flux:flexform.section>
-		</flux:flexform.sheet>
+			</flux:form.section>
+		</flux:form.sheet>
 		<f:if condition="{thumbnails -> f:count()}">
-			<flux:flexform.grid>
+			<flux:grid>
 				<f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
 					<f:for each="{itemSectionObjects}" as="object" key="objectType">
 						<f:if condition="{0: objectType, 1: object.disabled} == {0: 'content', 1: 0}">
-							<flux:flexform.grid.row>
-								<flux:flexform.grid.column>
-									<flux:flexform.content name="contentElements.{object.name}" label="{object.label}" />
-								</flux:flexform.grid.column>
-							</flux:flexform.grid.row>
+							<flux:grid.row>
+								<flux:grid.column>
+									<flux:form.content name="contentElements.{object.name}" label="{object.label}" />
+								</flux:grid.column>
+							</flux:grid.row>
 						</f:if>
 					</f:for>
 				</f:for>
-			</flux:flexform.grid>
+			</flux:grid>
 		</f:if>
-	</flux:flexform>
+	</flux:form>
 </f:section>
 
 <f:section name="SharedObject">
-	<flux:flexform.field.checkbox name="disabled" label="Disable/hide this object" />
-	<flux:flexform.field.select name="class" label="Size" commaSeparatedItems="1,2,3,4,5,6,7,8,9,10,11,12" />
+	<flux:field.checkbox name="disabled" label="Disable/hide this object" />
+	<flux:field.select name="class" label="Size" items="1,2,3,4,5,6,7,8,9,10,11,12" />
 </f:section>
 
 <f:section name="ImageObject">
-	<flux:flexform.object name="image">
+	<flux:form.object name="image">
 		<f:render section="SharedObject" arguments="{_all}" />
-		<flux:flexform.field.input name="file" eval="trim">
-			<flux:flexform.field.wizard.link />
-		</flux:flexform.field.input>
-		<flux:flexform.field.checkbox name="addWell" />
-		<flux:flexform.field.select name="scaling" items="{0: {0: 'Disable', 1: ''}, 1: {0: 'Crop', 1: 'c'}, 2: {0: 'Preserve maximums', 1: 'm'}}" />
-		<flux:flexform.field.input name="title" />
-		<flux:flexform.field.input name="header" />
-		<flux:flexform.field.text name="caption" />
-	</flux:flexform.object>
+		<flux:field.input name="file" eval="trim">
+			<flux:wizard.link />
+		</flux:field.input>
+		<flux:field.checkbox name="addWell" />
+		<flux:field.select name="scaling" items="{0: {0: 'Disable', 1: ''}, 1: {0: 'Crop', 1: 'c'}, 2: {0: 'Preserve maximums', 1: 'm'}}" />
+		<flux:field.input name="title" />
+		<flux:field.input name="header" />
+		<flux:field.text name="caption" />
+	</flux:form.object>
 </f:section>
 
 <f:section name="ContentObject">
-	<flux:flexform.object name="content">
+	<flux:form.object name="content">
 		<f:render section="SharedObject" arguments="{_all}" />
-		<flux:flexform.field.input name="name" />
-		<flux:flexform.field.input name="label" />
-		<flux:flexform.field.html name="message" label="">
+		<flux:field.input name="name" />
+		<flux:field.input name="label" />
+		<flux:field.custom name="message" label="">
 			Save this content element then insert content elements through page module to fill in this thumbnail.
-		</flux:flexform.field.html>
-	</flux:flexform.object>
+		</flux:field.custom>
+	</flux:form.object>
 </f:section>
 
 <f:section name="Preview">
@@ -78,7 +78,7 @@
 								<v:case case="image" break="TRUE">
 									<v:var.set name="imageWidth" value="{width -> v:math.division(b: 12) -> v:math.product(b: object.class)}" />
 									<v:var.set name="imageHeight" value="{ratio -> v:math.division(b: imageWidth)}" />
-									<a href="#" class="thumbnail">
+									<a href="#" class="img-thumbnail">
 										<f:image src="{object.file}" width="{imageWidth}{object.scaling}" height="{imageHeight}{object.scaling}" alt="{object.title}" />
 									</a>
 									<f:if condition="{0: object.header, 1: object.caption} != {0: '', 1: ''}">
@@ -91,7 +91,7 @@
 									</f:if>
 								</v:case>
 								<v:case case="content" break="TRUE">
-									<flux:flexform.renderContent area="contentElements.{object.name}" />
+									<flux:content.render area="contentElements.{object.name}" />
 								</v:case>
 							</v:switch>
 						</div>
