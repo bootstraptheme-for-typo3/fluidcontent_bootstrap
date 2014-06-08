@@ -1,5 +1,5 @@
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
@@ -34,9 +34,9 @@
 
 <f:section name="Main">
 
-	<v:var.set name="activeTabIndex" value="0" />
+	<v:variable.set name="activeTabIndex" value="0" />
 	<f:for each="{panels}" as="panel" iteration="iteration">
-		<f:if condition="{panel.panel.active}"><v:var.set name="activeTabIndex" value="{iteration.index}" /></f:if>
+		<f:if condition="{panel.panel.active}"><v:variable.set name="activeTabIndex" value="{iteration.index}" /></f:if>
 	</f:for>
 
 	<div class="panel-group" id="accordion-{record.uid}">
