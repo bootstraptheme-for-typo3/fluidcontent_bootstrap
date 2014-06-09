@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="Content" />
 <div xmlns="http://www.w3.org/1999/xhtml"
@@ -7,8 +7,8 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
-	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:var.set(name: 'numberOfColumns')}
+	{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
+	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name: 'numberOfColumns')}
 	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
 		<flux:field.checkbox name="settings.fluid" />
 		<flux:form.section name="columns">
@@ -22,8 +22,8 @@
 		<flux:grid>
 			<flux:grid.row>
 				<f:for each="{columns}" as="sectionObject" iteration="iteration">
-					<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 7)}" />
-					<v:var.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+					<v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 7)}" />
+					<v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
 					<flux:grid.column style="width: {percent}%">
 						<flux:form.content name="column{iteration.cycle}" label="{percent}%" />
 					</flux:grid.column>
