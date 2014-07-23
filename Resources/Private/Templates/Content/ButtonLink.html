@@ -64,7 +64,7 @@
 			</f:link.page>
 		</f:then>
 		<f:else>
-			<a href="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+			<a href="{v:uri.typolink(configuration: '{parameter: target}')}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
 				<f:render section="Text" arguments="{_all}" />
 			</a>
 		</f:else>
