@@ -1,3 +1,5 @@
+# Deprecated in favor for the successor <br /> [Fluid Theme for Twitter Bootstrap](https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme)
+
 Fluid Content Elements for Twitter Bootstrap
 ============================================
 
