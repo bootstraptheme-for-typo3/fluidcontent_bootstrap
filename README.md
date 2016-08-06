@@ -7,7 +7,7 @@ Fluid Content Elements for Twitter Bootstrap
 
 ## What is it?
 
-A collection of Twitter Boostrap oriented Fluid Content Elements written for `EXT:fluidcontent` using ViewHelpers from `EXT:vhs`.
+A collection of Twitter Boostrap (v 3.0) oriented Fluid Content Elements written for `EXT:fluidcontent` using ViewHelpers from `EXT:vhs`.
 
 ## What does it do?
 

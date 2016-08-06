@@ -297,9 +297,6 @@
 			<trans-unit id="flux.pageheader.fields.subheader" xml:space="preserve">
 				<source>Smaller text next to large text</source>
 			</trans-unit>
-			<trans-unit id="flux.row.fields.settings.fluid" xml:space="preserve">
-				<source>Use "fluid" row type instead of standard row</source>
-			</trans-unit>
 			<trans-unit id="flux.row.sections.columns" xml:space="preserve">
 				<source>Columns</source>
 			</trans-unit>
